@@ -7,9 +7,13 @@ import { AppComponent } from "./app.component";
 
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { HomeComponent } from './home/home.component';
+
 import { DrawerComponent } from "./shared/drawer/drawer.component";
 
 import { DishService } from './services/dish.service';
+import { PromotionService } from './services/promotion.service';
+import { LeaderService } from './services/leader.service';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 import { baseURL } from './shared/baseurl';
 
@@ -34,11 +38,14 @@ import { baseURL } from './shared/baseurl';
         AppComponent,
         MenuComponent,
         DishdetailComponent,
+        HomeComponent,
         DrawerComponent
     ],
     providers: [
         {provide: 'BaseURL', useValue: baseURL},
         DishService,
+        PromotionService,
+        LeaderService,
         ProcessHTTPMsgService
     ],
     schemas: [
